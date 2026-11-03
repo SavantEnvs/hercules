@@ -1,0 +1,9 @@
+project: savantenvs/hercules
+target: grfio
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/grfio/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_grfio
+    libfuzzer: true
+    timeout: 5

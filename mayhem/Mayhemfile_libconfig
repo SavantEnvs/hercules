@@ -1,0 +1,9 @@
+project: savantenvs/hercules
+target: libconfig
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/libconfig/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_libconfig
+    libfuzzer: true
+    timeout: 5
